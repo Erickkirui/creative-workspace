@@ -1,38 +1,242 @@
-.App {
-  text-align: center;
+
+/* Header style */
+.container1 .water,
+.container2 .water,
+.container5 .water {
+  background-color: #e22501;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container1 .unsettled-water,
+.container2 .unsettled-water,
+.container5 .unsettled-water {
+  background-color: pink;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.container1 .percentage,
+.container2 .percentage,
+.container5 .percentage {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container3 .water,
+.container4 .water {
+  background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.container3 .unsettled-water,
+.container4 .unsettled-water {
+  background-color: lightblue;
+}
+
+.container3 .percentage,
+.container4 .percentage {
+  color: black;
+}
+.container1 {
+  width: 350px;
+  height: 334px;
+  background-color: white;
+  position: relative;
+  color: black;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.container2 {
+  width: 103px;
+  height: 207px;
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+.container3 {
+  width: 103px;
+  height: 127px;
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ecf3fd;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+.container4 {
+  width: 246px;
+  height: 95px;
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ecf3fd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.container5 {
+  width: 212px;
+  height: 95px;
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: -108px;
+  box-shadow: 0 2px 4px r(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.water {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: blue;
+  animation: fill 3s linear forwards;
+}
+
+.unsettled-water {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: lightblue;
+  animation: unsettle 2s linear infinite;
+  opacity: 0;
+}
+
+.percentage {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.text-top {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+}
+
+.masonry-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-flow: dense;
+  width: 40%;
+}
+
+.masonry-item {
+  position: relative;
+}
+
+@keyframes fill {
+  0% {
+    height: 0;
   }
-  to {
-    transform: rotate(360deg);
+  70% {
+    height: 70%;
   }
+  100% {
+    height: 70%;
+  }
+}
+
+@keyframes unsettle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+   50% {
+    transform: translateY(-5px);
+  }
+}
+
+.row-container {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  width: 100%;
+}
+
+.left-content {
+  width: 30%;
+  padding: 20px;
+  margin: auto;
+
+}
+
+.heading {
+  font-size: 49px;
+  font-weight: bold;
+  color: #fff;
+
+}
+
+.text {
+  margin-top: 12px;
+  line-height: 1.5rem;
+  color: #fff;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.right-content {
+  width: 50%;
+}
+
+.button1{
+  padding: 1em 2em;
+  background-color: #e22501;
+  color: var(--secondary);
+  border-radius: 6px;
+  color: #fff;
+  transition: transform ease 0.2s, box-shadow ease 0.2s;
+  font-weight: bold;
+  border-style:none ;
+  margin-right: 10px;
+}
+.button2{
+  padding: 1em 2em;
+  background-color: #fff;
+  color: var(--secondary);
+  border-radius: 6px;
+  transition: transform ease 0.2s, box-shadow ease 0.2s;
+  font-weight: bold;
+  border-style:none ;
+  margin-right: 10px;
+
+}
+
+/* medaia query */
+@media (max-width: 768px) {
+.row-container {
+flex-direction: column;
+align-items: flex-start;
+}
+
+.left-content {
+width: 100%;
+text-align: center;
+display: inline-block;
+font-size: 18px;
+z-index: 2;
+}
+
+.right-content {
+width: 100%;
+margin-top: 20px;
+}
+
+.masonry-container {
+width: 100%;
+grid-template-columns: 1fr;
+}
+
+.masonry-item {
+width: 100%;
+}
 }
