@@ -1,9 +1,42 @@
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('../public/century-gothic.ttf');
+}
+/* pre defined items*/
+*{
+  font-family: 'Century Gothic'
+}
 
+:root {
+  --static: #ffffff;
+  --primary: #e22501;
+  --secondary: #000000;
+}
+:root{
+  --header: 60px;
+  --text: 12px;
+}
+/* Skill bar*/
+#skill{
+  margin: auto;
+  background-color: var(--static); 
+  padding: 20px;
+  width: 65%;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.me {
+  color: red;
+}
 /* Header style */
+.erick{
+  color: var(--primary);
+}
 .container1 .water,
 .container2 .water,
 .container5 .water {
-  background-color: #e22501;
+  background-color: var(--primary); 
 }
 
 .container1 .unsettled-water,
@@ -15,12 +48,12 @@
 .container1 .percentage,
 .container2 .percentage,
 .container5 .percentage {
-  color: white;
+  background-color: var(--static);
 }
 
 .container3 .water,
 .container4 .water {
-  background-color: white;
+  background-color: var(--static);
 }
 
 .container3 .unsettled-water,
@@ -35,7 +68,7 @@
 .container1 {
   width: 350px;
   height: 334px;
-  background-color: white;
+  background-color: var(--static);
   position: relative;
   color: black;
   border: 1px solid #fff;
@@ -51,7 +84,7 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
+  background-color: var(--static);
 }
 .container3 {
   width: 103px;
@@ -61,7 +94,7 @@
   border-radius: 10px;
   overflow: hidden;
   background-color: #ecf3fd;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff;
 }
 .container4 {
   width: 246px;
@@ -89,7 +122,6 @@
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: blue;
   animation: fill 3s linear forwards;
 }
 
@@ -157,7 +189,7 @@
   display: flex;
   align-items: center;
   padding: 50px;
-  width: 100%;
+  width: 117%;
 }
 
 .left-content {
@@ -168,7 +200,7 @@
 }
 
 .heading {
-  font-size: 49px;
+  font-size: var(--header);
   font-weight: bold;
   color: #fff;
 
@@ -177,7 +209,7 @@
 .text {
   margin-top: 12px;
   line-height: 1.5rem;
-  color: #fff;
+  color: var(--static);
 }
 
 .buttons {
@@ -190,10 +222,9 @@
 
 .button1{
   padding: 1em 2em;
-  background-color: #e22501;
-  color: var(--secondary);
+  background-color: var(--primary); 
+  color: var(--static);
   border-radius: 6px;
-  color: #fff;
   transition: transform ease 0.2s, box-shadow ease 0.2s;
   font-weight: bold;
   border-style:none ;
@@ -201,7 +232,7 @@
 }
 .button2{
   padding: 1em 2em;
-  background-color: #fff;
+  background-color: var(--static);
   color: var(--secondary);
   border-radius: 6px;
   transition: transform ease 0.2s, box-shadow ease 0.2s;

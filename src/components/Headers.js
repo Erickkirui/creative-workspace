@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
+import '/home/erick/portfolio/creative/src/App.css'
 
 function Header (){
   return (
     <div className="row-container">
       <div className="left-content">
       <h1 className="heading">
-          Discover the amazing  <br /> world of Erick Kirui
+          Discover the amazing  <br /> world of <span className='erick'> -Erick Kirui- </span>
         </h1>
         <p className="text">Creative problem solver and highly productive individual, achieving notable successes while also embracing failures as opportunities for growth.</p>
         <div className="buttons">

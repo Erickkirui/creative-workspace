@@ -1,10 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Header from './Headers';
+import Header from './components/Headers';
+import Skillbar from './components/Skillbar';
 
 function App() {
   return (
-   Header()
+    <div>
+      <Header />
+      <Skillbar />
+
+
+    </div>
+ 
+   
+   
+   
   );
 }
 
