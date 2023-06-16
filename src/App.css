@@ -1,34 +1,102 @@
+/* pre defined items*/
+
 @font-face {
   font-family: 'Century Gothic';
   src: url('../public/century-gothic.ttf');
-}
-/* pre defined items*/
-*{
-  font-family: 'Century Gothic'
 }
 
 :root {
   --static: #ffffff;
   --primary: #e22501;
   --secondary: #000000;
+  --devider : #F5f9fd;
 }
 :root{
   --header: 60px;
   --text: 12px;
 }
-/* Skill bar*/
-#skill{
-  margin: auto;
-  background-color: var(--static); 
-  padding: 20px;
-  width: 65%;
-  border-radius: 10px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+/* page */
+
+*{
+  font-family: 'Century Gothic';
 }
-.me {
-  color: red;
+
+/* Tools*/
+
+#tools{
+  background-color: var(--devider);
+  padding: 40px;
 }
+#card-spacing{
+  margin-top: 10px;
+
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 24rem;
+  background-color: var(--static);
+  padding: 1rem;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.card-image {
+  width: 92px;
+  height: 92px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  margin-bottom: 0;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px; /* Adjust the border radius as desired */
+  border: 2px solid transparent;
+  transition: border-color s ease-in-out;
+}
+
+.card:hover::after {
+  animation: drawBorder 0.5s forwards;
+}
+
+@keyframes drawBorder {
+  0% {
+    border-color: transparent; /* Start with transparent border color */
+  }
+  100% {
+    border-color: red; /* Transition to the final border color */
+  }
+}
+
+
 /* Header style */
 .erick{
   color: var(--primary);
@@ -188,7 +256,7 @@
 .row-container {
   display: flex;
   align-items: center;
-  padding: 50px;
+  padding: 100px;
   width: 117%;
 }
 
